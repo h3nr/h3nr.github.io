@@ -1,0 +1,335 @@
+/* Reset */
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Orbitron', sans-serif;
+    box-sizing: border-box;
+}
+
+/* Variables */
+:root {
+    --main-color: #86fe85;
+    --main-text-color: #fff;
+    --border-color: #508c4f;
+    --bio-bg-color: #191919;
+    --bio-border-color: #2e472e;
+    --about-bg-color: #000;
+}
+
+/* General */
+.highlight {
+    color: var(--main-color);
+}
+
+/* Containers */
+#container {
+    display: flex;
+    flex-direction: row;
+    color: var(--main-text-color);
+}
+
+#bio-container {
+    flex: 1 1 100%;
+    max-width: 370px;
+    min-height: 100vh;
+    background-color: var(--bio-bg-color);
+    text-align: center;
+    padding: 30px 12px;
+    border-right: 5px solid var(--bio-border-color);
+}
+
+#about-container {
+    flex: 1 1 80%;
+    min-height: 100vh;
+    background-color: var(--about-bg-color);
+    padding: 50px;
+}
+
+/* Bio container */
+#bio-container h2 {
+    font-family: 'Press Start 2P', cursive;
+    margin: 25px 0 25px 0;
+    font-size: 16px;
+}
+
+#bio-name::after {
+    content: '|';
+    font-family: Orbitron;
+    vertical-align: -3px;
+    margin-left: 3px;
+    font-size: 28px;
+    animation: pisca .8s infinite;
+}
+
+@keyframes pisca {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }    
+}
+
+#bio-image {
+    width: auto;
+    height: 225px;
+    border-radius: 50%;
+    margin-bottom: 25px;
+}
+
+.intro {
+    font-size: 17px;
+}
+
+#bio-container p {
+    margin-bottom: 40px;
+}
+
+#bio-container #welcome-text {
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+#social-container {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 25px;
+    padding-bottom: 25px;
+}
+
+#social-container li {
+    flex: 1 1 0;
+    max-width: 60px;
+}
+
+#social-container li a {
+    color: var(--main-color);
+    font-size: 30px;
+}
+
+#email-container {
+    display: flex;
+    justify-content: center;
+}
+
+#email-container ion-icon,
+#email-container span {
+    flex: 1 1 1;
+}
+
+#email-container ion-icon {
+    color: var(--main-color);
+    font-size: 20px;
+    margin-right: 5px;
+    max-width: 20px;
+}
+
+#email-container span {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.box{
+    width: 100%;
+    height: 150px;
+    background-color: aquamarine;
+    justify-content: center;
+}
+
+.inner{
+    position: absolute;
+    width: 10%;
+    height: 80px;
+    margin: 0 auto;
+    transform: translateZ(30px) translateX(-50%) translateY(50%);
+    box-shadow: 0 50px 0 rgba(51, 51, 51, 0.3);
+    background-color: #fff;
+    position: absolute;
+}
+
+/* about-container */
+#name {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 42px;
+    margin-bottom: 25px;
+}
+
+#title {
+    font-size: 24px;
+    margin-bottom: 25px;
+    font-weight: bold;
+}
+
+.description {
+    max-width: 75%;
+    margin-bottom: 15px;
+}
+
+#btn-projects {
+    font-weight: bold;
+    font-size: 18px;
+    color: #000;
+    background-color: var(--main-color);
+    border: 2px solid var(--main-color);
+    border-radius: 5px;
+    text-decoration: none;
+    transition: .5s;
+    margin: 45px 0 20px 0;
+    padding: 12px 10px;
+    width: 200px;
+    text-align: center;
+    display: flex;
+}
+
+#btn-projects ion-icon,
+#btn-projects span {
+    flex: 1 1 0;
+}
+
+#btn-projects ion-icon {
+    font-size: 20px;
+    max-width: 20px;
+}
+
+#btn-projects:hover {
+    background-color: transparent;
+    color: var(--main-text-color);
+}
+
+.skills-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 70%;
+    flex-wrap: wrap;
+    z-index: 1;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+
+}
+
+.card {
+    position: relative;
+    width: 280px;
+    height: 400px;
+    margin: 40px;
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    background: rgba(25, 25, 25, 1);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid rgba(46, 71, 46, 1);
+    border-left: 1px solid rgba(46, 71, 46, 1);
+    transform-style: preserve-3d;
+    perspective: 1000px;
+
+}
+
+#background-card {
+    position: absolute;
+    top: 15px;
+    left: 30px;
+    font-size: 23em;
+    color: rgba(255, 255, 255, 0.05);
+}
+
+.card-content {
+    padding: 20px;
+    text-align: center;
+    transform: translateY(20px);
+}
+
+.card:hover .card-content {
+    opacity: 1;
+    transform: translateY(20px);
+}
+
+
+
+/*#skills-section-title {
+    font-family: 'Press Start 2P', cursive;
+    border-top: 1px solid var(--border-color);
+    padding-top: 20px;
+    margin-bottom: 20px;
+    font-size: 32px;
+}
+
+#skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 25px;
+}
+
+.skills-box {
+    flex: 1 1 33%;
+    max-width: 33%;
+    margin-bottom: 35px;
+}
+
+.skills-title {
+    font-size: 24px;
+    margin-bottom: 25px;
+    font-weight: bold;
+    padding-left: 10px;
+    border-left: 5px solid var(--main-color);
+}
+
+.skills-box i {
+    font-size: 45px;
+    margin-right: 10px;
+}*/
+
+/* Mobile */
+@media(max-width: 450px) {
+    #container{
+        flex-direction: column;
+    }
+    #bio-container {
+        min-height: auto;
+        border-right: none;
+        border-bottom: 5px solid var(--bio-border-color);
+    }
+    #bio-container h2 {
+        display: none;
+    }
+
+    #bio-container p {
+        max-width: 70%;
+        margin: 10px auto;
+    }
+
+    #about-container {
+        text-align: center;
+        padding: 30px;
+    }
+
+    #name {
+        font-size: 8vw;
+    }
+
+    #about-container .description{
+        margin: 10px auto;
+        max-width: 100%;
+        line-height: 26px;
+    }
+
+    #btn-projects {
+        margin: 20px auto;
+    }
+
+    .skills-box {
+        flex: 1 1 100%;
+        max-width: 100%;
+        margin-bottom: 40px;
+        text-align: left;
+    }
+
+    .skills-box i {
+        font-size: 60px;
+    }
+}
