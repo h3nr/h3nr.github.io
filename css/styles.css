@@ -2,18 +2,18 @@
 * {
     padding: 0;
     margin: 0;
-    font-family: 'Orbitron', sans-serif;
+    font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
 }
 
 /* Variables */
 :root {
-    --main-color: #86fe85;
-    --main-text-color: #fff;
-    --border-color: #508c4f;
-    --bio-bg-color: #191919;
-    --bio-border-color: #2e472e;
-    --about-bg-color: #000;
+    --main-color: #54b689;
+    --main-text-color: #ffffff;
+    --border-color: #999999;
+    --bio-bg-color: #1e2a3a;
+    --bio-border-color: #293544;
+    --about-bg-color: #111821;
 }
 
 /* General */
@@ -29,8 +29,7 @@
 }
 
 #bio-container {
-    flex: 1 1 100%;
-    max-width: 370px;
+    flex: 1 1 20%;
     min-height: 100vh;
     background-color: var(--bio-bg-color);
     text-align: center;
@@ -47,46 +46,21 @@
 
 /* Bio container */
 #bio-container h2 {
-    font-family: 'Press Start 2P', cursive;
-    margin: 25px 0 25px 0;
-    font-size: 16px;
-}
-
-#bio-name::after {
-    content: '|';
-    font-family: Orbitron;
-    vertical-align: -3px;
-    margin-left: 3px;
-    font-size: 28px;
-    animation: pisca .8s infinite;
-}
-
-@keyframes pisca {
-    0%, 100% {
-        opacity: 1;
-    }
-    50% {
-        opacity: 0;
-    }    
-}
-
-#bio-image {
-    width: auto;
-    height: 225px;
-    border-radius: 50%;
     margin-bottom: 25px;
 }
 
-.intro {
-    font-size: 17px;
-}
-
 #bio-container p {
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 }
 
 #bio-container #welcome-text {
     font-weight: bold;
+}
+
+#bio-image {
+    width: auto;
+    height: 175px;
+    border-radius: 50%;
     margin-bottom: 25px;
 }
 
@@ -115,8 +89,14 @@
 }
 
 #email-container ion-icon,
-#email-container span {
-    flex: 1 1 1;
+#email-container a {
+    flex: 1 1 0;
+}
+
+#email-container a {
+    color: var(--main-text-color);
+    text-decoration: none;
+    max-width: 225px;
 }
 
 #email-container ion-icon {
@@ -126,59 +106,35 @@
     max-width: 20px;
 }
 
-#email-container span {
-    font-weight: bold;
-    font-size: 16px;
-}
-
-.box{
-    width: 100%;
-    height: 150px;
-    background-color: aquamarine;
-    justify-content: center;
-}
-
-.inner{
-    position: absolute;
-    width: 10%;
-    height: 80px;
-    margin: 0 auto;
-    transform: translateZ(30px) translateX(-50%) translateY(50%);
-    box-shadow: 0 50px 0 rgba(51, 51, 51, 0.3);
-    background-color: #fff;
-    position: absolute;
-}
-
 /* about-container */
 #name {
-    font-family: 'Press Start 2P', cursive;
     font-size: 42px;
-    margin-bottom: 25px;
+    margin-bottom: 15px;
 }
 
 #title {
     font-size: 24px;
-    margin-bottom: 25px;
+    margin-bottom: 15px;
     font-weight: bold;
 }
 
 .description {
     max-width: 75%;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
 #btn-projects {
     font-weight: bold;
-    font-size: 18px;
-    color: #000;
+    font-size: 16px;
+    color: var(--main-text-color);
     background-color: var(--main-color);
     border: 2px solid var(--main-color);
     border-radius: 5px;
     text-decoration: none;
     transition: .5s;
-    margin: 45px 0 20px 0;
+    margin: 25px 0;
     padding: 12px 10px;
-    width: 200px;
+    width: 150px;
     text-align: center;
     display: flex;
 }
@@ -195,64 +151,9 @@
 
 #btn-projects:hover {
     background-color: transparent;
-    color: var(--main-text-color);
 }
 
-.skills-container {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    max-width: 70%;
-    flex-wrap: wrap;
-    z-index: 1;
-    transform-style: preserve-3d;
-    perspective: 1000px;
-
-}
-
-.card {
-    position: relative;
-    width: 280px;
-    height: 400px;
-    margin: 40px;
-    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
-    border-radius: 15px;
-    background: rgba(25, 25, 25, 1);
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-top: 1px solid rgba(46, 71, 46, 1);
-    border-left: 1px solid rgba(46, 71, 46, 1);
-    transform-style: preserve-3d;
-    perspective: 1000px;
-
-}
-
-#background-card {
-    position: absolute;
-    top: 15px;
-    left: 30px;
-    font-size: 23em;
-    color: rgba(255, 255, 255, 0.05);
-}
-
-.card-content {
-    padding: 20px;
-    text-align: center;
-    transform: translateY(20px);
-}
-
-.card:hover .card-content {
-    opacity: 1;
-    transform: translateY(20px);
-}
-
-
-
-/*#skills-section-title {
-    font-family: 'Press Start 2P', cursive;
+#skills-section-title {
     border-top: 1px solid var(--border-color);
     padding-top: 20px;
     margin-bottom: 20px;
@@ -282,7 +183,7 @@
 .skills-box i {
     font-size: 45px;
     margin-right: 10px;
-}*/
+}
 
 /* Mobile */
 @media(max-width: 450px) {
@@ -307,11 +208,6 @@
         text-align: center;
         padding: 30px;
     }
-
-    #name {
-        font-size: 8vw;
-    }
-
     #about-container .description{
         margin: 10px auto;
         max-width: 100%;
